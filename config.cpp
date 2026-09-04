@@ -1,0 +1,5 @@
+#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgMoves.hpp"
+#include "CfgStrobes.hpp"
+#include "CfgVehicles.hpp"
