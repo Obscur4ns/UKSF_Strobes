@@ -8,22 +8,30 @@ class CfgVehicles
         {
             class ACE_Equipment
             {
-                class UKSF_Strobes
+                class UKSF_Helmet
                 {
-                    displayName = "Strobe";
+                    displayName = "Helmet";
                     icon = "";
-                    condition = "[_player] call UKSF_Strobes_fnc_canUseStrobe";
+                    condition = "!(headgear _player isEqualTo '')";
                     statement = "";
-                    insertChildren = "_this call UKSF_Strobes_fnc_getActions";
-                };
 
-                class UKSF_Strobes_Calibration
-                {
-                    displayName = "Strobe Calibration";
-                    icon = "";
-                    condition = "(_player getVariable ['UKSF_Strobes_calibrationActive',false]) || ((missionNamespace getVariable ['UKSF_Strobes_calibrationEnabled',false]) && ([_player] call UKSF_Strobes_fnc_canUseStrobe))";
-                    statement = "";
-                    insertChildren = "_this call UKSF_Strobes_fnc_getCalibrationActions";
+                    class UKSF_Strobes
+                    {
+                        displayName = "Strobe";
+                        icon = "";
+                        condition = "[_player] call UKSF_Strobes_fnc_canUseStrobe";
+                        statement = "";
+                        insertChildren = "_this call UKSF_Strobes_fnc_getActions";
+                    };
+
+                    class UKSF_Strobes_Calibration
+                    {
+                        displayName = "Strobe Calibration";
+                        icon = "";
+                        condition = "(_player getVariable ['UKSF_Strobes_calibrationActive',false]) || ((missionNamespace getVariable ['UKSF_Strobes_calibrationEnabled',false]) && ([_player] call UKSF_Strobes_fnc_canUseStrobe))";
+                        statement = "";
+                        insertChildren = "_this call UKSF_Strobes_fnc_getCalibrationActions";
+                    };
                 };
             };
         };
